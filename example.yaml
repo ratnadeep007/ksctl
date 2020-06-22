@@ -1,0 +1,8 @@
+name: demo-cluster-yaml
+provider: do
+region: blr1
+nodes:
+  - type: s-1vcpu-2gb
+    count: 2 
+  - type: s-2vcpu-2gb
+    count: 2 
