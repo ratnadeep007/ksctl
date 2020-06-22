@@ -44,7 +44,7 @@ nodes:
 kubectl get node --kubeconfig <cluster_name>-kubeconfig # show nodes to new k8s cluster
 ./ksctl list --provider do # list all cluster for give provider
 ./ksctl delete --config example.yaml # delete cluster
-```:
+```
 
 ### Progress
 
