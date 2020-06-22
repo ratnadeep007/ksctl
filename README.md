@@ -26,6 +26,26 @@ brew install upx
 ./build.sh
 ```
 
+### Deploying in DigitalOcean
+```yaml
+# example.yaml
+name: demo-cluster-yaml
+provider: do
+region: blr1
+nodes:
+  - type: s-1vcpu-2gb
+    count: 2
+  - type: s-2vcpu-2gb
+    count: 2
+```
+
+```bash
+./ksctl create cluster --config example.yaml # create cluster
+kubectl get node --kubeconfig <cluster_name>-kubeconfig # show nodes to new k8s cluster
+./ksctl list --provider do # list all cluster for give provider
+./ksctl delete --config example.yaml # delete cluster
+```:
+
 ### Progress
 
 - [X] DigitalOcean Deploy cluster 
