@@ -43,5 +43,5 @@ jobs:
     - name: Upload to artifact
       uses: actions/upload-artifact@v2
       with:
-        name: totp-${{ matrix.platform }}
+        name: ksctl-${{ matrix.platform }}
         path: ./ksctl-${{ matrix.platform }}  
