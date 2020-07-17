@@ -2,6 +2,24 @@
 
 A cross cloud kubernetes deploying command line.
 
+### Usage
+- Download perferred version for your OS
+- Move it to path eg /usr/local/bin and rename it to totp
+- Add a file name example.yml 
+- Add content like 
+```yaml
+# example.yaml
+name: demo-cluster-yaml
+provider: do
+region: blr1
+nodes:
+  - type: s-1vcpu-2gb
+    count: 2
+  - type: s-2vcpu-2gb
+    count: 2
+```
+- Run `ksctl create cluster --config example.yaml`
+
 ### Development requirement
 
 - Golang 1.14
